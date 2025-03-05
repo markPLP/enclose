@@ -1,0 +1,144 @@
+/*
+Theme Name: Hello Elementor Child
+Theme URI: https://elementor.com/
+Description: A child theme for Hello Elementor.
+Author: Your Name
+Author URI: https://yourwebsite.com/
+Template: hello-elementor
+Version: 1.0.0
+*/
+
+header.site-header {
+  display: block;
+  padding: 0;
+
+  .top-header-bar {
+    background: #fcd214;
+    padding: 8px 0 7px;
+  }
+
+  .container {
+    max-width: 1930%;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.__container {
+  max-width: 100%;
+  padding: 0;
+}
+
+/** 
+* custom mega menu
+
+/* Custom Mega Menu */
+
+.custom-nav {
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 15px;
+  display: block;
+}
+
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 800px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.menu-shop:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mega-col {
+  width: 30%;
+}
+
+.mega-col h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mega-col ul {
+  list-style: none;
+}
+
+.mega-col ul li {
+  margin-bottom: 5px;
+}
+
+.mega-col ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.product-slider {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  gap: 10px;
+}
+
+.product-item {
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.product-item img {
+  width: 100px;
+  height: auto;
+}
+
+.add-to-cart {
+  display: block;
+  margin-top: 5px;
+  background: #28a745;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 834px) {
+  .top-header-bar-right,
+  .top-header-bar-left {
+    display: none;
+  }
+
+  header.site-header .container {
+    grid-template-columns: 1fr;
+  }
+}
